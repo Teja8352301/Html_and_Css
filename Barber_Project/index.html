@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/mobile.css">
+    <title>Document</title>
+    <style>
+        :root{
+    --primary-color:rgb(80, 231, 186,0.8);
+}
+body{
+    overflow-x: hidden;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+/* -------HEADER JUST STYLING---------------------------------------- */
+header{
+    height:100vh;
+    width:100vw;
+    overflow-x: hidden;
+    overflow-y:hidden;
+}
+.container{
+    position: relative;
+    padding-left:10vw;
+}
+#img3,#img2{
+    height: 20px;
+    width:20px;
+    margin-right:32px;
+    cursor: pointer;
+}
+
+#r1,#r2{
+    height:30px;
+    width:30px;
+    position:absolute;
+}
+/* -----------------NAV BAR------------------------------- */
+#nav-bar{
+    width:300px;
+    height:100vh;
+    background-color:rgb(70, 63, 63);
+}
+#b2 ul{
+    list-style: none;
+}
+#b2 ul li{
+    margin-top:20px;
+}
+#b2 ul li a{
+    display: block;
+    text-decoration: none;
+    color:white;
+    padding:15px;
+    font-size:20px;
+}
+#b2 ul li a:hover{
+    background-color:white;
+    color:black;
+}
+/* ---------------------------ALIGNMENT-------------------------- */
+#nav-bar{
+    position: absolute;
+    right: 0;
+    top:0;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    transition: all 2s ease-in-out;
+    transform:translateX(300px) ;
+}
+#b1{
+    margin-top:20px;
+}
+header .container{
+    padding-top:20px;
+    display: flex;
+    justify-content: space-between;
+}
+#r1{
+    right:20px;
+    opacity: 0;
+    position: fixed;
+}
+#r2{
+    position: absolute;
+    top:20px;
+    right:20px;
+    opacity:0;
+    position: fixed
+}
+
+#r1:checked+#nav-bar{
+    transform: translateX(0px);
+    right: 0;
+}
+/* -------------------------------MAIN------------------- */
+main{
+    height:100%;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+main #mainh{
+    font-size:100px;
+    margin-bottom: 25px;
+}
+main #mainp{
+    font-size:30px;
+    margin-bottom: 25px;
+}
+main #link a{
+    display: inline-block;
+    width:200px;
+    text-align: center;
+    padding:10px;
+    text-decoration: none;
+    font-size: 20px;
+    color:white;
+    border:1px dotted white;
+    margin-left: 20px;
+    transition:all 1s ease-in-out;
+}
+main #link a:hover{
+    background-color:white;
+    color:black;
+
+}
+/* ----------------OVERLAY----------------------------- */
+header:before{
+    content: '';
+    background:url('/Barber_Shop_img/banner.jpg') no-repeat center center/cover;
+    width:100vw;
+    height: 100vh;
+    position: absolute;
+    opacity: 0.5;
+    z-index:-1;
+}
+header{
+    z-index:2;
+}
+
+/* ----------------------------SECTION------------------ */
+section{
+    background-color:white;
+    width:100vw;
+    height:100vh;
+    overflow-x:hidden;
+    overflow-y:hidden ;
+}
+section .container{
+    padding-right:10vw;
+    padding-left:10vw;
+    padding-top:4vh;
+    padding-bottom:8vh;
+}
+#z1 h1{
+    text-align: center;
+    font-size:40px;
+}
+#y1 {
+    color:rgba(20, 65, 62, 0.877);
+}
+.fa-shield,.fa-rupee{
+    padding:5px;
+    border-radius:20%;
+}
+#w1,#w2,#w3{
+    display:flex;
+    flex-direction: row;
+}
+#w1 p,#w2 p,#w3 p{
+    font-size:18px;
+    padding-left:30px;
+}
+#x1 h1,#x2 h1,#x3 h1{
+    margin-top:15px;
+    margin-bottom:15px;
+}
+#x1,#x2,#x3{
+    width:50vw;
+}
+#y1{
+    display: flex;
+    flex-direction: column;
+}
+#y2 img{
+    width:30vw;
+    height:70vh;
+    border-radius:10%;
+}
+#z2{
+    display: flex;
+    flex-direction: row;
+    margin-top:50px;
+}
+/* -----------------------ARTICLE------------------- */
+article{
+    background-color:white;
+    width:100vw;
+    height: 100vh;
+    overflow-y: hidden;
+}
+article .container{
+    padding-left:10vw;
+    padding-right: 10vw;
+    display:flex;
+    flex-direction: column;
+}
+#p1 h1{
+    font-size: 35px;
+    text-align:center;
+    padding-top:30px;
+    padding-bottom:30px;
+}
+#p2 img{
+    transition:all 2s ease-in-out;
+    width:100%;
+    height: 100%;
+    border-radius:10px;
+    cursor: pointer;
+
+}
+#p2{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 10px;
+}
+#q1,#q2,#q3,#q4{
+    position: relative;
+    width:40vw;
+    height: 40vh;
+    border-radius:10px;
+    cursor: pointer;
+}
+.l{
+    width:50%;
+    height: 2px;
+    background-color:white;
+}
+.r
+{
+    
+    position: absolute;
+    background-color:var(--primary-color);
+    color:white;
+    transform:translateY(200px);
+    bottom:0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index:-1;
+    opacity:0;
+    border-radius: 10px;
+}
+.r h2{
+    margin:15px;
+}
+.r p{
+    font-size:18px;
+    margin-top:20px;
+    line-height: 20px;
+    padding-left:30px;
+    padding-right:30px;
+}
+#p2 img:hover + .r{
+    animation:anima1 forwards 2s;
+    transition: all  2s ease-in-out ;
+    
+    
+}
+@keyframes anima1{
+    30%{
+    bottom:0;
+    z-index:0;
+    opacity:0.2;
+    transform:translateY(0px);
+    }
+    100%{
+        bottom:0;
+        z-index:0;
+        opacity:0.8;
+        transform:translateY(0px);
+        }
+}
+
+
+
+/* -------------------TESTIMONIALS------------- */
+#testi{
+    padding-top:40px;
+    background-color:#f4f4f4;
+}
+#testi .container{
+    padding-left:10vw;
+    padding-right:10vw;
+    display: flex;
+    flex-direction: column;
+}
+#g1 h1{
+    text-align: center;
+    font-size:36px;
+    display: block;
+}
+.j1 h3{
+    font-size:20px;
+    display: inline-block;
+}
+.j1 i,.j1 p{
+    color:rgb(14, 114, 145);
+}
+#g2{
+    display: flex;
+}
+#g2 #h1,#g2 #h2,#g2 #h3{
+    margin:25px;
+    margin-top:40px;
+    padding:20px;
+    border:5px solid #f4f4f4;
+    box-shadow: 5px 5px 10px rgb(20, 112, 124);
+    cursor:pointer;
+    transition: all 0.5s ease-in-out;
+}
+#g2 #h1:hover,#g2 #h2:hover,#g2 #h3:hover{
+
+    box-shadow: 10px 10px 20px rgb(20, 112, 124);
+    transform:translateY(-10px);
+}
+
+/*------------------- Footer----------------- */
+
+footer{
+    background-color:rgb(219, 202, 202);
+    width:100vw;
+    height: 60vh;
+    overflow-y:auto;
+}
+footer .container{
+    padding-left:10vw;
+    padding-right:10vw;
+    padding-top:7vh;
+    display: flex;
+    flex-direction: column;
+}
+footer i{
+    color: rgb(20, 112, 124);
+}
+.v1 h1{
+    text-align: center;
+}
+#v2{
+    padding-top:10vh;
+    display:flex;
+    justify-content: space-between;
+}
+#v3 #s1 a{
+    text-decoration: none;
+}
+#v3 #s1 i{
+    font-size:22px;
+    background-color:rgb(20, 112, 124);
+    color:white;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:10%;
+    margin:10px;
+    transition:all 1s ease-in-out;
+}
+#v3 #s1{
+    display: flex;
+    justify-content: center;
+}
+#v3 #s1 a:hover{
+    transform:translateY(-5px);
+}
+#v4{
+    text-align:center;
+}
+#u1 h3,#u2 h3{
+    padding-bottom: 15px;
+}
+#u1 p,#u2 p{
+    padding-bottom: 15px;
+}
+
+        /* Responisve */
+    @media(max-width:700px)
+{
+    #nav-bar{
+        width: 200px;
+    }
+    #b2 ul li a{
+        font-size:16px;
+    }
+    /* ----MAIN---- */
+    main #mainh{
+        font-size:60px;
+    }
+    main #mainp{
+        font-size:25px;
+    }
+    main #link a{
+        display: block;
+        margin-top:10px;
+    }
+    /* Section */
+    section .container{
+        padding-top:8vh;
+        padding-bottom: 6px;
+    }
+    #z1 h1{
+        font-size:30px;
+    }
+    .fa-shield,.fa-rupee{
+        padding:5px;
+        border-radius:20%;
+    }
+   
+    #z2{
+        display: flex;
+        flex-direction: column;
+    }
+    #y2{
+        display: none;
+    }
+    #y1{
+        display: flex;
+        flex-direction: column;
+    }
+    #x1,#x2,#x3{
+        width:100%;
+        margin-bottom:30px;
+    }
+    /* Article */
+    #p1 h1{
+        font-size:25px;
+    }
+    #p2{
+        grid-gap:3px;
+    }
+    .r h2{
+        margin:5px;
+        font-size:20px;
+    }
+    .r p{
+        margin-top:7px;
+        line-height:15px;
+        padding-left:7px;
+        padding-right:7px;
+    }
+    /* Testimonials */
+    #testi{
+        padding-top:20px;
+        background-color:#f4f4f4;
+    }
+    #g1 h1{
+        font-size:28px;
+    }
+    #g2{
+        display: block;
+    }
+    /* -----------Footer--------- */
+    .v1 h1{
+        font-size:22px;
+    }
+    footer .container{
+        padding-left:6vw;
+        padding-right:6vw;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="a1">
+                <img src="Barber_Shop_img/logo.png" id="img1">
+            </div>
+            <div id="a2">
+                <img src="/Barber_Shop_img/menu.png" id="img2">
+            </div>
+            <input type="radio" name="radio" id="r1">
+            <div id="nav-bar">
+                <div id="b1">
+                    <img src="/Barber_Shop_img/close.png" id="img3">
+                </div>
+                <input type="radio" name="radio" id="r2">
+                <div id="b2">
+                    <ul>
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">FEATURES</a></li>
+                        <li><a href="#">SERVICES</a></li>
+                        <li><a href="#">TESTIMONIALS</a></li>
+                        <li><a href="#">MEET US</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <main>
+        <h1 id="mainh">Hair Studio</h1>
+        <p id="mainp">Style Your Hair Is Style Your Life</p>
+        <div id="link">
+        <a href="#" id="find">Find Out</a>
+        <a href="#" id="read">Read More</a>
+    </div>
+        </main>
+    </header>
+    <section>
+        <div class="container">
+            <div id="z1">
+                <h1>Why Choose Us</h1>
+            </div>
+            <div id="z2">
+                <div id="y1">
+                    <div id="x1">
+                        <h1>Experienced Staff</h1>
+                        <div id="w1">
+                            <i class="fa fa-shield fa-2x"></i>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus odit corrupti excepturi? Obcaecati, facilis ipsa.
+                            </p>
+                    </div>
+                    </div>
+                    <div id="x2">
+                        <h1>Pre Booking Online</h1>
+                        <div id="w2">
+                            <span id="i1" style='font-size:35px;'>&#10004;</span>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus odit corrupti excepturi? Obcaecati, facilis ipsa.
+                            </p>
+                        </div>
+                    </div>
+                    <div id="x3">
+                        <h1>Affordable Cost</h1>
+                        <div id="w3">
+                            <i class="fa fa-rupee fa-2x"></i>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus odit corrupti excepturi? Obcaecati, facilis ipsa.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="y2">
+                    <img src="Barber_Shop_img/barber-man.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
+    <article>
+        <div class="container">
+        <div id="p1">
+            <h1>We Provide Better</h1>
+        </div>
+        <div id="p2">
+            <div id="q1" id="f1">
+            <img src="Barber_Shop_img/pic-1.jpg">
+            <div class="r" >
+                <h2>Hair Styling</h2>
+                <div class="l"></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.
+                    Lorem ipsum dolor sit amet consectetur adipisicing.
+                </p>
+            </div>
+        </div>
+        <div id="q2" id="f2">
+            <img src="Barber_Shop_img/pic-2.jpg">
+            <div class="r">
+                <h2>Beard Trim</h2>
+                <div class="l"></div>
+                <p><p>Lorem ipsum dolor sit amet consectetur adipisicing.
+                    Lorem ipsum dolor sit amet consectetur adipisicing.
+                </p></p>
+            </div>
+        </div>
+        <div id="q3" id="f3">
+            <img src="/Barber_Shop_img/pic-3.jpg">
+            <div class="r">
+                <h2>Dry Shampoo</h2>
+                <div class="l"></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.
+                    Lorem ipsum dolor sit amet consectetur adipisicing.
+                </p>
+            </div>
+        </div>
+        <div id="q4" id="f4">
+            <img src="/Barber_Shop_img/pic-4.jpg">
+            <div class="r">
+                <h2>Hair Cut</h2>
+                <div class="l"></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.
+                    Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            </div>
+        </div>
+        </div>
+    </div>
+    </article>
+    <div id="testi">
+        <div class="container">
+        <div id="g1">
+            <h1>What Client Says</h1>
+        </div>
+        <div id="g2">
+            <div id="h1">
+                <div class="j1">
+                <h3>Ken Norman</h3>
+                <span><i class="fa fa-twitter"></i></span>
+                <p>@kennorman</p>
+            </div>
+            <div class="j2">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, consequuntur?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, ratione?
+                </p>
+            </div>
+            </div>
+            <div id="h2">
+                <div class="j1">
+                <h3>Liara Karian</h3>
+                <span><i class="fa fa-twitter"></i></span>
+                <p>@karianliara</p>
+            </div>
+            <div class="j2">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, consequuntur?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, ratione?
+                </p>
+            </div>
+        </div>
+        <div id="h3">
+        <div class="j1">
+            <h3>Ricky Daniel</h3>
+            <span><i class="fa fa-twitter"></i></span>
+            <p>@rickydaniel</p>
+        </div>
+        <div class="j2">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, consequuntur?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, ratione?
+            </p>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="v1">
+                <h1>Visit Shop Today</h1>
+            </div>
+            <div id="v2">
+                <div id="u1">
+                    <h3>Opening Hours</h3>
+                    <p><i class="fa fa-clock-o"></i> Monday to Friday-9am to 9pm 
+                    <p><i class="fa fa-clock-o"></i> Saturday And Sunday-8am to 8pm</p>
+                </div>
+                <div id="u2">
+                    <h3>Get In Touch</h3>
+                    <p>#30 abc Colony xyz Vihar in <i class="fa fa-map-marker"></i></p>
+                    <p>example@gmail.com <i class="fa fa-telegram"></i></p>
+                    <p>9080706050 <i class="fa fa-phone"></i></p>
+                </div>
+            </div>
+            <div id="v3">
+                <div id="s1">
+                    <a href="#"><i class="fa fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-youtube-play"></i></a>
+                </div>
+            </div>
+            <div id="v4">
+                <p>Copyright &copy; 2020 Easy Tutorials Youtube Channel</p>
+            </div>
+        </div>
+        
+    </footer>
+</body>
+</html>

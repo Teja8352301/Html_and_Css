@@ -1,0 +1,85 @@
+@media(max-width:700px)
+{
+    #nav-bar{
+        width: 200px;
+    }
+    #b2 ul li a{
+        font-size:16px;
+    }
+    /* ----MAIN---- */
+    main #mainh{
+        font-size:60px;
+    }
+    main #mainp{
+        font-size:25px;
+    }
+    main #link a{
+        display: block;
+        margin-top:10px;
+    }
+    /* Section */
+    section .container{
+        padding-top:8vh;
+        padding-bottom: 6px;
+    }
+    #z1 h1{
+        font-size:30px;
+    }
+    .fa-shield,.fa-rupee{
+        padding:5px;
+        border-radius:20%;
+    }
+   
+    #z2{
+        display: flex;
+        flex-direction: column;
+    }
+    #y2{
+        display: none;
+    }
+    #y1{
+        display: flex;
+        flex-direction: column;
+    }
+    #x1,#x2,#x3{
+        width:100%;
+        margin-bottom:30px;
+    }
+    /* Article */
+    #p1 h1{
+        font-size:25px;
+    }
+    #p2{
+        grid-gap:3px;
+    }
+    .r h2{
+        margin:5px;
+        font-size:20px;
+    }
+    .r p{
+        margin-top:7px;
+        line-height:15px;
+        padding-left:7px;
+        padding-right:7px;
+    }
+    /* Testimonials */
+    #testi{
+        padding-top:20px;
+        background-color:#f4f4f4;
+    }
+    #g1 h1{
+        font-size:28px;
+    }
+    #g2{
+        display: block;
+    }
+    /* -----------Footer--------- */
+    .v1 h1{
+        font-size:22px;
+    }
+    footer .container{
+        padding-left:6vw;
+        padding-right:6vw;
+    }
+}
+
